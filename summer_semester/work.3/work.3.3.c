@@ -74,6 +74,15 @@ void print(int *arr){
     }
         printf("]\n");
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> 7ac43b381f2ecfc0a380498cc6c707aa90eb409e
 
 
 
