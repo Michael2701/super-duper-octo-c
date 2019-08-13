@@ -4,6 +4,7 @@
 #import <Foundation/Foundation.h>
 #import<stdio.h>
 #define N 3
+
 void agefunc(int *age,int *avg,int *under){
     *avg+=*age;
     if (*age<=18)
@@ -16,8 +17,6 @@ int agecheck(int age){ //check if the entered number is an actual age
     else
         return 1;
 }
-
-
 
 int main(){
     int age = 0,i,under = 0,avg = 0;
