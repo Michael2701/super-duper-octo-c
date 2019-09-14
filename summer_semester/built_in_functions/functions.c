@@ -31,12 +31,12 @@ void main(){
 
 }
 
-char str_len(char *str){
+char str_len(char* str){
     int len = 0;
     for(;*(str+len);len++);
     return len;
 }
-char str_cmp(char *str1, char *str2){
+char str_cmp(char* str1, char* str2){
     return str_len(str1) - str_len(str2); 
 }
 int _atoi(char *str){
