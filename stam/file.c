@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int str_len(char*);
+int strLen(char*);
 void flip(char*, char*);
 void parser(char*);
 
@@ -34,7 +34,7 @@ void flip(char* start, char* end){
     }
 }
 
-int str_len(char* a){
+int strLen(char* a){
     int len = 0;
     for(;*(a+len);len++);
     return len;
