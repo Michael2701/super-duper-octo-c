@@ -1,31 +1,36 @@
 # include <stdio.h>
-# define N 17
+# define N 70
 
 
 void main() {
-    int i = 0, j = 0, length;
+    int i = 0, j = 0, flag = 1,length;
     char arr[N];
     gets(arr);
 
-    for (i = 0; i < N; i++) {
+    for (i = 0; i < N && flag; i++) 
+    {
         j = i;
 
-        while (arr[j] && arr[j] != '*') {
+        while (arr[j] && arr[j] != '*') 
+        {
             j++;
         }
-        printf("(%d) ", j);
-        printf("(%d) ", i);
+
+        if(arr[j] == '\0') flag = 0;
+
         length = j - i;
 
-        if (length % 2 == 0) {
+        if (length % 2 == 0) 
+        {
             printf("%c", arr[ i + length/2 - 1 ]);
-            printf("%c | ", arr[ i + length/2 ]);
+            printf("%c", arr[ i + length/2 ]);
         }
-        else {
-            printf("%c | ", arr[ i + length/2 ]);
+        else 
+        {
+            printf("%c", arr[ i + length/2 ]);
         }
 
+        printf("\n");
         i = j;
     }
-
 }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">My Form</h1>
+        <p class="sub-title">Please fill form and then press the button</p>
+        <hr>
+        <form method="POST" autocomplete="off">
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input class="form-control" type="text" name="first_name">
+            </div>
+            <div class="form-group">
+                <label for="first_name">Email:</label>
+                <input class="form-control" type="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="first_name">Phone Number</label>
+                <input class="form-control" type="tel" name="phone">
+            </div>
+            <div class="box">
+                <div class="box-group">
+                    <label for="gender">Gender</label>
+                    <div class="form-group">
+                        <input value="male" name="gender" type="radio">
+                        <span>Male</span>
+                    </div>
+                    <div class="form-group">
+                        <input value="female" name="gender" type="radio">
+                        <span>Female</span>
+                    </div>
+                </div>
+                <div class="box-group">
+                    <label for="gender">Working hours</label>
+                    <div class="form-group">
+                        <input value="male" type="checkbox">
+                        <span>Morning</span>
+                    </div>
+                    <div class="form-group">
+                        <input value="female" type="checkbox">
+                        <span>Evening</span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group wild">
+                <label for="request">Comments or Spesial Requests</label>
+                <textarea class="form-control" 
+                          name="request"
+                          placeholder="Put your wish here >>"></textarea>
+            </div>
+            <div class="form-group align-left">
+                <input type="checkbox" name="accepted" class="form-control">
+                <span>I accept the terms</span>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

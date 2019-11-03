@@ -2,7 +2,6 @@
 # define N 3
 
 void search(int arr1[][N], int arr2[][N]);
-void input(int arr[][N]);
 
 void main() {
     int arr1[N][N] = {{1,2,3},{3,4,5},{6,7,8}};

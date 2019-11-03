@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>Forms</title>
+</head>
+<body>
+    <div id="cover">
+        <div id="modal">
+            <h2 class="modal-title">Try to submit the form :)))</h2>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="main-title">User agreement</h1>
+        <form id="form" method="post" autocomplete="off" novalidate>
+            <div class="form-group">
+                <label for="first-name" class="form-label">First Name</label>
+                <input type="text" required minlength="3" maxlength="12" name="firstName" class="form-control with-bg form-user">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="first-name" class="form-label">Last Name</label>
+                <input type="text" required minlength="3" maxlength="12" name="lastName" class="form-control with-bg form-user">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="first-name" class="form-label">Email</label>
+                <input  type="email" 
+                        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" 
+                        class="form-control with-bg form-email"
+                        name="email" 
+                        required>
+                <span></span>
+            </div>
+            <div class="form-group radio">
+                <label for="gender" class="form-label">Gender</label>
+                <div>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male" class="form-control">
+                        <label for="male" class="form-label">male</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="female" name="gender" value="female" class="form-control">
+                        <label for="female" class="form-label">female</label>
+                    </div>
+                </div>
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="something" class="form-label">Something</label>
+                <select required class="form-control" name="something" id="">
+                    <option value="">Choose something</option>
+                    <option value="1">Something 1</option>
+                    <option value="2">Something 2</option>
+                </select>
+                <span></span>
+            </div>
+            <div class="form-group with-switch">
+                <label class="switch">
+                    <input type="checkbox" class="form-control">
+                    <span class="slider round"></span>
+                </label>
+                <span class="checkbox-label">agree to anything</span>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="action-btn">
+            </div>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
