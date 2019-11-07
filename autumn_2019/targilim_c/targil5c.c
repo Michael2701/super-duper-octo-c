@@ -32,6 +32,7 @@ void main(){
     for(i = 0; i < len; i++){
         printf("%d ", c[i]);
     }
+    free(c);
 }
 
 
