@@ -26,7 +26,7 @@ int getMaxAppirence(char* str[N]) {
     int i,j,max=0,index;
     int nums[256] = {0};
 
-    // run throuth all chars in all given strings
+    // run through all chars in all given strings
     // in order to count number of appirences 
     for (i = 0; i < N; i++) {
         for (j = 0; str[i][j] != '\0'; j++) {
