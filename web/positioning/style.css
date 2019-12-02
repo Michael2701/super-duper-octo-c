@@ -1,0 +1,42 @@
+:root{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background-color: lightslategrey;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    position: relative;
+    max-width: 600px;
+    display: flex;
+}
+.main-container figure:nth-child(1){
+    position: relative;
+    transition: all .3s;
+}
+.main-container figure:nth-child(2){
+    position: absolute;
+    transition: all .3s;
+}
+.main-container figure:nth-child(2):hover{
+    opacity: 0;
+}
+.main-container figure figcaption{
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+
+
+
+
+
