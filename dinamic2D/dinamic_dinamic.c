@@ -5,20 +5,20 @@
 #define N 2
 
 
-void dinamic_dinamic(char*** arr, int* n);
-void print_array(char** arr, int num);
+void dinamic_dinamic(char** arr, int* n);
+void print_array(char* arr[], int num);
 
 void main(){
     int n = 0;
     char** arr;
     // create 2D array with dinamic number of rows
     // and dinamic number of columns ( arr )
-    dinamic_dinamic(&arr, &n);
+    dinamic_dinamic(arr, &n);
     printf("=%d=\n",n);
     print_array(arr, n);
 }
 
-void dinamic_dinamic(char*** arr, int* n){
+void dinamic_dinamic(char** arr, int* n){
     int i;
     char tmp[100] = {0};
 
@@ -28,25 +28,26 @@ void dinamic_dinamic(char*** arr, int* n){
     }
     while(n < 0);
 
-    **arr = (char*)malloc((*n) * sizeof(char*));
+    printf("n=%d\n",*n);
+    *arr = (char*)malloc((*n) * sizeof(char*));
     
     for(i = 0; i < *n; i++)
     {
         printf("Enter a string: ");
         scanf("%s", tmp);
         if(tmp){
-            strcpy((*arr)[i], tmp); 
+            arr[i] = (char*)malloc((strlen(tmp)+1)*sizeof(char));
+            strcpy(arr[i], tmp); 
         }
     }
 }
 
-void print_array(char** arr, int num)
+void print_array(char* arr[], int num)
 {
     int i;
     for(i = 0; i < num; i++)
     {
-        printf("%s", arr[i]);
-        printf("\n");
+        printf("%s\n", arr[i]);
     }
 };
 

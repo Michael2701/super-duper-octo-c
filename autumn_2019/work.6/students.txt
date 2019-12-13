@@ -1,0 +1,3 @@
+vasiliy 1 88 91 
+katia 1 96 90 
+natasha 1 87 92 

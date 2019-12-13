@@ -8,10 +8,10 @@
             "name": "gcc build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "program": "/home/michael/Projects/super-duper-octo-c/dinamic2D/dinamic_dinamic", // fileDirname/fileBasenameNoExtension
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "/home/michael/Projects/super-duper-octo-c/", //workspaceFolder
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
