@@ -1,3 +1,4 @@
+//michael silianov + evgeney golovachov
 #include <stdio.h>
 #include <stdlib.h>
 #define N 5

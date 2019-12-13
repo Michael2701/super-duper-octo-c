@@ -28,7 +28,6 @@ void main(){
     find_max(c, N, &max);
 
     printf("%d\n", max);
-
 }
 
 void find_max(int a[], int size, int* max){
