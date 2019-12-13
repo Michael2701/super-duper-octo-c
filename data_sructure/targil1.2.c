@@ -4,6 +4,15 @@
 #pragma warning(disable:4996)
 #define N 10
 
+/* 
+    find_max: n (size) iterations = O(n)
+    
+    find_sequences: 6 + 8 * size
+    6 and 8 are not important => O(n) 
+
+    O(n)
+*/
+
 // finds all accending and descending sequences in given array
 void find_sequences(int a[], int b[], int size);
 
