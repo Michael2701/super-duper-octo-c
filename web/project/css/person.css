@@ -1,0 +1,33 @@
+
+.slider-img,
+.slider-img img
+{
+    width: 100%;
+}
+.person-container{
+    width: 80%;
+    max-width: 992px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+.hero-list{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+}
+ul li{
+    list-style: none;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+p#about{
+    font-size: 2rem;
+    line-height: 3rem;
+}
