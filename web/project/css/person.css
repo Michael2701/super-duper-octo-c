@@ -5,7 +5,7 @@
     width: 100%;
 }
 .person-container{
-    width: 80%;
+    width: 100%;
     max-width: 992px;
     margin: 50px auto;
     display: flex;
@@ -30,4 +30,9 @@ ul li{
 p#about{
     font-size: 2rem;
     line-height: 3rem;
+}
+@media (max-width:550px){
+    .person-container{
+        width: 95%;
+    }
 }

@@ -12,12 +12,20 @@ body{
     top: 0;
     left: 0;
     margin-bottom: 0;
-    padding-bottom: 120px;
     height: auto;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 main{
+    width: 100%;
     margin-top: 50px;
+    margin-bottom: 50px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 main h1{
     text-align: center;
@@ -63,6 +71,10 @@ nav.open{
     flex-direction: column;
     justify-content: space-between;
     cursor:pointer;
+    transition: all .3s;
+}
+.hamburger:hover{
+    transform: scale(1.1);
 }
 .hamburger.open{
     left: 150px;
@@ -70,19 +82,19 @@ nav.open{
 .hamburger div{
     width: 100%;
     height: 15%;
-    background-color: blanchedalmond;
+    background-color: grey;
+    box-shadow: grey;
 }
 /* end nav bar */
-
+header{
+    width: 100%;
+}
 /* footer */
 footer{
     width: 100%;
     height: 90px;
     background-color: #111;
     color: #666;
-    position: absolute;
-    bottom: 0;
-    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;

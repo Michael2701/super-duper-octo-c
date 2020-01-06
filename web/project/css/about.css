@@ -1,3 +1,14 @@
+body::after {
+    content: "";
+    background-image: url('../img/30151.jpg');
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+}
 h1{
     text-align: center;
 }
