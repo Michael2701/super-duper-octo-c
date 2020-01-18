@@ -1,3 +1,4 @@
+//michael silianov + evgeney golovachov
 #include <stdio.h>
 #include <stdlib.h>
 #define N 25
@@ -12,6 +13,7 @@ typedef struct{
 typedef student univer[L];
 
 void readToArray(student* Univer);// read file and save to array of structs
+void freeUniver(student* Univer); // free dinamically allocated array inside student struct
 void printCourseStudents(student* Univer, int coursNumber); // print students per cours 
 int countPerCourse(student* Univer, int coursNumber); // count students for one course
 int charToNum(char* s); // transform char to number
@@ -44,6 +46,7 @@ void main(){
             break;
             case 3:
                 run = 0;
+                freeUniver(Univer);
                 printf("Good buy\n");
             break;
             default:
@@ -85,6 +88,11 @@ void printCourseStudents(student* Univer, int coursNumber){
     }
 }
 
+void freeUniver(student* Univer){
+    for(int i = 0; i < L; i++){
+        free(Univer[i].courses);
+    }   
+}
 
 void readToArray(student* Univer) {
     int a,b,n;
