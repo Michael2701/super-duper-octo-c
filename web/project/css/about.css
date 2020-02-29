@@ -12,3 +12,69 @@ body::after {
 h1{
     text-align: center;
 }
+main{
+    width: 80%;
+    max-width: 992px;
+    height: auto;
+    margin: 0 auto;
+}
+table.about-table {
+  border: 6px solid #948473;
+  background-color: #FFE3C6;
+  width: 100%;
+  text-align: center;
+}
+table.about-table td, table.about-table th {
+  border: 1px solid #948473;
+  padding: 10px 4px;
+}
+table.about-table tbody td {
+  font-size: 13px;
+}
+table.about-table thead {
+  background: #948473;
+  background: linear-gradient(to bottom, #afa396 0%, #9e9081 66%, #948473 100%);
+}
+table.about-table thead th {
+  font-size: 17px;
+  font-weight: bold;
+  color: #F0F0F0;
+  text-align: center;
+  border-left: 2px solid #948473;
+}
+table.about-table thead th:first-child {
+  border-left: none;
+}
+
+table.about-table tfoot {
+  font-size: 16px;
+  font-weight: bold;
+  color: #F0F0F0;
+  background: #948473;
+  background: linear-gradient(to bottom, #afa396 0%, #9e9081 66%, #948473 100%);
+}
+table.about-table tfoot td {
+  font-size: 16px;
+}
+table.about-table tbody tr:hover{
+  transition: all .3s;
+  background-color: #948473;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media screen and (max-width:550px){
+  table.about-table th:nth-child(3),
+  table.about-table th:nth-child(4),
+  table.about-table th:nth-child(5),
+  table.about-table th:nth-child(6),
+  table.about-table th:nth-child(7),
+  table.about-table td:nth-child(3),
+  table.about-table td:nth-child(4),
+  table.about-table td:nth-child(5),
+  table.about-table td:nth-child(6),
+  table.about-table td:nth-child(7)
+  {
+      display: none;
+  }
+}

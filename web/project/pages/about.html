@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/about.css">
 </head>
 <body>
+    <div id="backdrop"></div>
     <nav>
         <div class="hamburger">
             <div></div>
@@ -25,7 +26,7 @@
         <h1>About</h1>
     </header>
     <main>
-        <table>
+        <table class="about-table">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -37,9 +38,18 @@
                     <th>Gender</th> 
                 </tr>
             </thead>
-            <tbody>
-
-            </tbody>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mass</th>
+                    <th>Hair</th>
+                    <th>Eyes</th>
+                    <th>Birth Year</th>
+                    <th>Gender</th> 
+                </tr>
+            </tfoot>
         </table>
 
     </main>
@@ -48,6 +58,8 @@
         Powered by Mighty Web Developers 0x7E3 &copy;
     </footer>
 
+    <script src="../js/people.js"></script>
     <script src="../js/script.js"></script>
+    <script src="../js/about.js"></script>
 </body>
 </html>

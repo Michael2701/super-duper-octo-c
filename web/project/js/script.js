@@ -20,14 +20,26 @@ const _ = new myClass();
 
 
 // side menu
-    const menu_btn = _.find('.hamburger');
+    const menu_btn  = _.find('.hamburger');
     const side_menu = _.find('nav');
+    const backdrop  = _.find('#backdrop');
+    const body      = _.find('body');
+
     menu_btn.addEventListener('click', function(e){
         if(side_menu.classList.contains('open')){
             side_menu.classList.remove('open');
+            backdrop.classList.remove('show');
+            body.style.overflowY = 'scroll';
         }else{
             side_menu.classList.add('open');
+            backdrop.classList.add('show');
+            body.style.overflow = 'hidden';
         }
+    });
+    backdrop.addEventListener('click',function(e){
+        side_menu.classList.remove('open');
+        backdrop.classList.remove('show');
+        body.style.overflowY = 'scroll';
     });
 
 // end side menu
