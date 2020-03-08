@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "app2"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"files.associations": {
+			"stdlib.h": "c",
+			"stdio.h": "c"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "super-duper-octo-c"
+	}
+}
