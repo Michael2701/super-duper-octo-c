@@ -1,24 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ViewChild, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AuthService, AuthResponseData } from './auth.service';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { Router } from '@angular/router';
+import { AlertComponent } from '../shared/alert/alert.component';
+import { PlaceholderDirective } from '../shared/placeholder/placeholder.directive';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss']
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent implements OnInit, OnDestroy {
   loginForm: FormGroup;
   formIsNotValid = true;
-  formMode = true;
+  formMode = false;
   isLoading = false;
   errorMessage = null;
+  @ViewChild(PlaceholderDirective, {static: false}) alertHost: PlaceholderDirective;
+
+  private closeSub: Subscription;
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private componentFactoryResolver: ComponentFactoryResolver
   ) { }
 
   ngOnInit(): void {
@@ -35,6 +41,28 @@ export class AuthComponent implements OnInit {
 
   swithchMode(){
     this.formMode = !this.formMode;
+  }
+
+  onHandleError(){
+    this.errorMessage = null;
+  }
+
+  showErrorAlert(message: string){
+    const alertCmpFactory = this.componentFactoryResolver.resolveComponentFactory(AlertComponent);
+    const hostViewContainerRef = this.alertHost.viewContainerRef;
+    hostViewContainerRef.clear();
+    const cmpRef = hostViewContainerRef.createComponent(alertCmpFactory);
+    cmpRef.instance.message = message;
+    this.closeSub = cmpRef.instance.close.subscribe(() => {
+      this.closeSub.unsubscribe();
+      hostViewContainerRef.clear();
+    })
+  }
+
+  ngOnDestroy(){
+    if(this.closeSub){
+      this.closeSub.unsubscribe();
+    }
   }
 
   onSubmit(){
@@ -63,6 +91,7 @@ export class AuthComponent implements OnInit {
         console.log(errorMessage);
         this.isLoading = false;
         this.errorMessage = errorMessage;
+        this.showErrorAlert(errorMessage);
     });
     this.loginForm.reset();
   }
